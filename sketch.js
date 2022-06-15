@@ -2,6 +2,8 @@ var sliderred, slidergreen, sliderblue;
 var val1, val2, val3;
 
 
+
+
 function preload(){
 
     
@@ -31,12 +33,17 @@ function setup() {
 }
 
 function draw() {
+    background(val1,val2,val3);
     val1 = sliderred.value();
     val2 = slidergreen.value();
     val3 = sliderblue.value();
-    background(val1,val2,val3);
-  
-    drawSprites();
+
+    
+
+    fill(val1-100,val2-50, val3)
+    text("Red: "+val1,100,50);
+    text("Green: "+val2,100,100);
+    text("Blue: "+val3,100,150);
 
 
 }
